@@ -16,6 +16,14 @@ The app itself is a very simple Hello World (ish) app. Not only does it show
 "Hello World"... but when you click (or tap) it... it changes from red to blue!
 woah!
 
+## Technologies Used
+
+  - [React](https://facebook.github.io/react/)
+  - [React Native](https://facebook.github.io/react-native/)
+  - [Redux](http://redux.js.org/)
+  - [Webpack](https://webpack.github.io/)
+  - [Babel](https://babeljs.io/)
+
 ## Directory Structure
 
 `android` houses the Android project files, `ios` houses the iOS project files,
@@ -34,6 +42,11 @@ to be a "write once, run everywhere" framework. Facebook constantly calls it a
 implementation to the platform you're writing for. The second is that React
 Native and React are ultimately... different and the code wouldn't be reusable
 without some crazy aliases.
+
+## Entry Points
+
+The entry point for the iOS app is `index.ios.js`, for android is
+`index.android.js`, and for the web app is `app/web/index.js`.
 
 ## Configured Scripts
 
