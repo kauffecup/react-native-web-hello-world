@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { PropTypes } from 'react-native';
+import React, { Component, PropTypes } from 'react';
 import { Provider } from 'react-redux/native';
 import PortfolioInsights from './App';
 
