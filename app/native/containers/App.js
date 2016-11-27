@@ -1,5 +1,6 @@
-import React, { Component, View, PropTypes } from 'react-native';
-import { connect }  from 'react-redux/native';
+import React, { Component, PropTypes } from 'react';
+import { View } from 'react-native';
+import { connect }  from 'react-redux';
 import { appStyle } from '../styles/styles';
 // dumb components
 import Header     from '../components/Header';
