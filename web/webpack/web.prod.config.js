@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: [
-    path.join(__dirname, '../../app/web/index'),
+    path.join(__dirname, '../../index.web'),
   ],
   output: {
     path: path.join(__dirname, '../public/'),

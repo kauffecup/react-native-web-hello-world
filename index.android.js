@@ -1,10 +1,11 @@
-import React, { Component, AppRegistry } from 'react-native';
-import Root           from './app/native/containers/Root';
+import React, { Component } from 'react';
+import { AppRegistry } from 'react-native';
+import Root           from './app/Root';
 import configureStore from './app/store/configureStore.prod.js';
 
 const store = configureStore();
 
-class ReactNativeelloWorld extends Component {
+class ReactNativeWebHelloWorld extends Component {
   render() {
     return (
       <Root store={store} />
@@ -12,4 +13,4 @@ class ReactNativeelloWorld extends Component {
   }
 }
 
-AppRegistry.registerComponent('ReactNativeWebHelloWorld', () => ReactNativeelloWorld);
+AppRegistry.registerComponent('ReactNativeWebHelloWorld', () => ReactNativeWebHelloWorld);
