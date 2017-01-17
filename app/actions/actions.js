@@ -5,7 +5,7 @@ import {
 } from '../constants/Constants';
 import {
   exampleRequest,
-} from '../requester';
+} from '../services/requester';
 
 /** Toggle the hello world color */
 export function toggleColor() {

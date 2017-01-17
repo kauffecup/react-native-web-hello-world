@@ -1,5 +1,5 @@
 {
-  "name": "ReactNativeWebHelloWorld",
+  "name": "ReactNativeWebApp",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -21,6 +21,7 @@
     "react": "15.4.1",
     "react-dom": "15.4.1",
     "react-native": "0.39.0",
+    "react-native-web": "^0.0.68",
     "react-redux": "5.0.1",
     "redux": "3.6.0",
     "redux-thunk": "^1.0.3",

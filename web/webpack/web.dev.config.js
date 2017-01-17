@@ -6,7 +6,7 @@ module.exports = {
   entry: [
     'webpack-hot-middleware/client',
     'babel-polyfill',
-    path.join(__dirname, '../../app/web/index'),
+    path.join(__dirname, '../../index.web'),
   ],
   output: {
     path: path.join(__dirname, '../public'),
@@ -34,6 +34,11 @@ module.exports = {
         },
       },
     ],
+  },
+  resolve: {
+    alias: {
+      'react-native': 'react-native-web'
+    }
   },
   plugins: [
     new webpack.DefinePlugin({
