@@ -1,5 +1,5 @@
 // import request from 'superagent';
-const baseURL = 'http://localhost:3000';
+const baseURL = 'http://localhost:4000';
 
 /**
  * Hit the companylookup endpoint with the proper query.
