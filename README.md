@@ -63,10 +63,10 @@ between local storage mechanisms.
 
 
 ## Dependencies to consider
-"axios": "^0.12.0",
-"babel-plugin-add-module-exports": "^0.1.2",
-"babel-plugin-react-html-attrs": "^2.0.0",
-"babel-plugin-transform-class-properties": "^6.3.13",
-"babel-plugin-transform-decorators-legacy": "^1.3.4",
-"babel-preset-stage-0": "^6.3.13",
-"redux-promise-middleware": "^3.2.0",
+- "axios": "^0.12.0"
+- "babel-plugin-add-module-exports": "^0.1.2"
+- "babel-plugin-react-html-attrs": "^2.0.0"
+- "babel-plugin-transform-class-properties": "^6.3.13"
+- "babel-plugin-transform-decorators-legacy": "^1.3.4"
+- "babel-preset-stage-0": "^6.3.13"
+- "redux-promise-middleware": "^3.2.0"
