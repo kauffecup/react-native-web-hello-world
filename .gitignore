@@ -39,3 +39,8 @@ buck-out/
 \.buckd/
 android/app/libs
 android/keystores/debug.keystore
+
+.flowconfig
+
+# BUILD
+web/public/bundle.js
