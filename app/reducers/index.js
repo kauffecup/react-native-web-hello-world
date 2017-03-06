@@ -17,7 +17,7 @@ export default function reduce(state = initialState, action) {
   switch (action.type) {
   case TOGGLE_COLOR:
     return assign({}, state, {
-      color: state.color === 'red' ? 'blue' : 'red'
+      color: state.color === 'red' ? 'yellow' : 'red'
     });
 
   case EXAMPLE_REQUEST_START:
