@@ -1,4 +1,3 @@
-import clone        from 'clone';
 import assign       from 'object-assign';
 import {
   TOGGLE_COLOR,
