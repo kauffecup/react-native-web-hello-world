@@ -4,7 +4,7 @@ const webpack = require('webpack');
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: [
-    'webpack-hot-middleware/client',
+    // 'webpack-hot-middleware/client',
     'babel-polyfill',
     path.join(__dirname, '../../app/web/index'),
   ],
@@ -14,24 +14,41 @@ module.exports = {
     publicPath: '/',
   },
   module: {
-    loaders: [
+    rules: [
       // take all less files, compile them, and bundle them in with our js bundle
-      { test: /\.less$/, loader: 'style!css!autoprefixer?browsers=last 2 version!less' },
+      {
+				test: /\.less$/,
+				use: [
+					'style-loader',
+					'css-loader',
+					{
+						loader: 'autoprefixer-loader',
+						options: {
+							browsers: 'last 2 version'
+						}
+					},
+					'less-loader'
+				]
+			},
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015', 'react'],
-          plugins: [['react-transform', {
-            transforms: [{
-              transform: 'react-transform-hmr',
-              imports: ['react'],
-              // this is important for Webpack HMR:
-              locals: ['module']
-            }],
-          }]],
-        },
+				use: [
+					{
+						loader: 'babel-loader',
+						options: {
+							presets: ['es2015', 'react'],
+							plugins: [['react-transform', {
+								transforms: [{
+									transform: 'react-transform-hmr',
+									imports: ['react'],
+									// this is important for Webpack HMR:
+									locals: ['module']
+								}],
+							}]],
+						},
+					}
+				]
       },
     ],
   },
@@ -42,8 +59,8 @@ module.exports = {
         PLATFORM_ENV: JSON.stringify('web'),
       },
     }),
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
+    // new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
+		new webpack.NamedModulesPlugin(),
   ],
 };
