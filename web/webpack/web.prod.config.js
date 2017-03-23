@@ -11,16 +11,31 @@ module.exports = {
     publicPath: '/',
   },
   module: {
-    loaders: [
+		rules: [
       // take all less files, compile them, and bundle them in with our js bundle
-      { test: /\.less$/, loader: 'style!css!autoprefixer?browsers=last 2 version!less' },
+      {
+				test: /\.less$/,
+				use: [
+					'style-loader',
+					'css-loader',
+					{
+						loader: 'autoprefixer-loader',
+						options: {
+							browsers: 'last 2 version'
+						}
+					},
+					'less-loader'
+				]
+			},
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015', 'react'],
-        },
+				use: [
+					loader: 'babel-loader',
+					options: {
+						presets: ['es2015', 'react'],
+					},
+				]
       },
     ],
   },
@@ -33,8 +48,6 @@ module.exports = {
       },
     }),
     // optimizations
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,
