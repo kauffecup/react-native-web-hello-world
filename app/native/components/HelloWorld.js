@@ -1,4 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import {
   View,
   Text,
@@ -6,6 +8,10 @@ import {
 } from 'react-native';
 
 export default class HelloWorld extends Component {
+
+  static propTypes = {
+    onPress: PropTypes.func.isRequired,
+  }
   render() {
     const { onPress, color } = this.props;
     const style = StyleSheet.create({
@@ -20,9 +26,4 @@ export default class HelloWorld extends Component {
       </View>
     );
   }
-}
-
-HelloWorld.propTypes = {
-  onPress: PropTypes.func.isRequired,
-  color: PropTypes.string.isRequired,
 }
