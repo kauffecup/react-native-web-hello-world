@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 // dumb components
 import Header     from '../components/Header';
@@ -10,6 +11,12 @@ import {
 
 /** The app entry point */
 class ReactNativeWebHelloWorld extends Component {
+  
+  static propTypes = {
+    dispatch: PropTypes.func.isRequired,
+    color: PropTypes.string.isRequired,
+    data: PropTypes.object.isRequired,
+  };
   render() {
     // injected by connect call
     const { dispatch, color, data } = this.props;
@@ -25,12 +32,6 @@ class ReactNativeWebHelloWorld extends Component {
     );
   }
 }
-
-ReactNativeWebHelloWorld.propTypes = {
-  dispatch: PropTypes.func.isRequired,
-  color: PropTypes.string.isRequired,
-  data: PropTypes.object.isRequired,
-};
 
 const select = state => state;
 
