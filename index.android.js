@@ -5,7 +5,7 @@ import configureStore from './app/store/configureStore.prod.js';
 
 const store = configureStore();
 
-class ReactNativeelloWorld extends Component {
+class ReactNativeHelloWorld extends Component {
   render() {
     return (
       <Root store={store} />
@@ -13,4 +13,4 @@ class ReactNativeelloWorld extends Component {
   }
 }
 
-AppRegistry.registerComponent('ReactNativeWebHelloWorld', () => ReactNativeelloWorld);
+AppRegistry.registerComponent('ReactNativeWebHelloWorld', () => ReactNativeHelloWorld);
